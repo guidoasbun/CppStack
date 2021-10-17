@@ -3,6 +3,7 @@ OUTPUT:
 4 2 1 
 */
 
+#include "stacks.h"
 #include <iostream>
 #include <string>
 
@@ -69,5 +70,25 @@ int main()
     }
 
     cout << endl;
+
+    stack<int> myStack2;
+    myStack2.push(1);
+    myStack2.push(2);
+    myStack2.push(3);
+    myStack2.push(4);
+    myStack2.push(5);
+    myStack2.push(6);
+    myStack2.push(7);
+    myStack2.push(8);
+    myStack2.push(9);
+
+    selectiveReverse(myStack2);
+
+    while (!myStack2.empty())
+    {
+        cout << myStack2.top() << " ";
+        myStack2.pop();
+    }
+
     return 0;
 }
